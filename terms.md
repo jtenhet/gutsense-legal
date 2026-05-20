@@ -72,4 +72,4 @@ These terms are governed by the laws of **USA/TN**, without regard to its confli
 
 ## 13. Contact
 
-Questions, complaints, or requests: **info!tenhetapp.com**.
+Questions, complaints, or requests: **info@tenhetapp.com**.
