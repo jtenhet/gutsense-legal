@@ -11,6 +11,14 @@ GutSense lets you permanently delete your account and all associated data at any
 3. Scroll to the **Data** section.
 4. Tap **Delete account** and confirm.
 
+## Delete individual entries (without deleting your account)
+
+You don't need to delete your whole account to remove specific data:
+
+- **Meals** — tap any meal on the Today timeline or in History, then tap **Delete meal**. The meal is removed immediately.
+- **Profile fields** — open **Settings** to clear your display name, change your known allergens, or change your dietary restrictions at any time.
+- **Per-entry symptom deletion** is coming in a future update. Until then, you can delete your full account to remove specific symptom entries, or contact **info@tenhetapp.com** for help removing individual entries on your behalf.
+  
 ### By email
 
 If you no longer have the app installed, email **info@tenhetapp.com** from the address associated with your account and ask us to delete it. We will process the request within 7 days and confirm by reply.
