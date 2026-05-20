@@ -16,7 +16,7 @@ You must be at least 13 years old (or older if your country requires) to use Gut
 
 ## 3. Your account
 
-You are responsible for keeping your password safe and for everything that happens under your account. Notify us at **[CONTACT EMAIL]** if you suspect your account has been accessed without your permission.
+You are responsible for keeping your password safe and for everything that happens under your account. Notify us at **info@tenhetapp.com** if you suspect your account has been accessed without your permission.
 
 ## 4. Your content
 
