@@ -44,7 +44,7 @@ You can, at any time and free of charge:
 
 - **Export** all your data as JSON from Settings.
 - **Delete** your account from Settings. This permanently removes your profile, meals, symptoms, photos, and computed patterns.
-- **Contact us** at **[CONTACT EMAIL]** with any question, correction, or request.
+- **Contact us** at **info@tenhetapp.com** with any question, correction, or request.
 
 If you live in a region with specific data rights (EU/UK/California/etc.), those rights apply to your account, and the methods above are how to exercise them.
 
