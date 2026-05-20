@@ -6,7 +6,7 @@ GutSense is a personal food and symptom journal. This policy explains what data 
 
 ## Who runs GutSense
 
-GutSense is operated by **[YOUR NAME OR COMPANY]**. Contact: **[CONTACT EMAIL]**.
+GutSense is operated by **TenhetApp**. Contact: **info@tenhetapp.com**.
 
 ## What we collect
 
@@ -58,4 +58,4 @@ If we change this policy materially, we will notify you in the app before the ch
 
 ## Contact
 
-**[CONTACT EMAIL]**
+**info@tenhetapp.com**
