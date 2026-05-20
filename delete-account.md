@@ -15,14 +15,6 @@ GutSense lets you permanently delete your account and all associated data at any
 
 If you no longer have the app installed, email **info@tenhetapp.com** from the address associated with your account and ask us to delete it. We will process the request within 7 days and confirm by reply.
 
-## Delete individual entries (without deleting your account)
-
-You don't need to delete your whole account to remove specific data:
-
-- **Meals** — tap any meal on the Today timeline or in History, then tap **Delete meal**. The meal is removed immediately.
-- **Profile fields** — open **Settings** to clear your display name, change your known allergens, or change your dietary restrictions at any time.
-- **Per-entry symptom deletion** is coming in a future update. Until then, you can delete your full account to remove specific symptom entries, or contact **info@tenhetapp.com** for help removing individual entries on your behalf.
-
 ## What is deleted
 
 When you delete your account, the following is **permanently removed**:
@@ -40,6 +32,13 @@ If you have an active GutSense Plus subscription, it must be cancelled separatel
 
 Nothing personal. GutSense does not retain personal data after account deletion. Anonymous, aggregated usage events (such as the daily count of active sessions) are not linked to you and cannot be used to identify you.
 
+## Delete individual entries (without deleting your account)
+
+You don't need to delete your whole account to remove specific data:
+
+- **Meals** — tap any meal on the Today timeline or in History, then tap **Delete meal**. The meal is removed immediately.
+- **Profile fields** — open **Settings** to clear your display name, change your known allergens, or change your dietary restrictions at any time.
+- **Per-entry symptom deletion** is coming in a future update. Until then, you can delete your full account to remove specific symptom entries, or contact **info@tenhetapp.com** for help removing individual entries on your behalf.
 ## Questions
 
 Contact **info@tenhetapp.com** with any question about the deletion process.
