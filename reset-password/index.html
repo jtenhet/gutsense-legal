@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reset your password — GutSense</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      min-height: 100%;
+      background: #FBFAF7;
+      color: #1F1F1A;
+      font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 17px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    .logo {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 18px;
+      color: #1F1F1A;
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      text-decoration: none;
+    }
+    .container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 64px 24px 48px;
+      max-width: 480px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #6BB281;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 28px;
+      color: #FFFFFF;
+    }
+    h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 1.2;
+      margin-bottom: 14px;
+      letter-spacing: -0.01em;
+    }
+    p {
+      color: #5C5C56;
+      margin-bottom: 24px;
+      max-width: 380px;
+    }
+    .button {
+      display: inline-block;
+      background: #6BB281;
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: opacity .15s;
+      margin-bottom: 4px;
+    }
+    .button:hover { opacity: .88; }
+    .hint {
+      font-size: 14px;
+      color: #8C8C84;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <a href="https://jtenhet.github.io/gutsense-legal/" class="logo">GutSense</a>
+  <div class="container">
+    <div class="icon" aria-hidden="true">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+      </svg>
+    </div>
+    <h1>Reset your password</h1>
+    <p>Tap below to set a new password in the GutSense app on your phone.</p>
+    <a href="#" class="button" id="openApp">Open GutSense</a>
+    <p class="hint">If the button doesn't open the app, switch back to GutSense on your phone and request a fresh reset link from the sign-in screen.</p>
+  </div>
+  <script>
+    // Preserve URL fragment — it carries the recovery tokens the reset-password
+    // screen needs to apply via applyRecoveryTokens(). Without this hand-off,
+    // the user can't actually set a new password.
+    var fragment = window.location.hash || '';
+    var deepLink = 'gutsense://reset-password' + fragment;
+    document.getElementById('openApp').href = deepLink;
+    // Best-effort auto-handoff to the app. If no handler is installed (desktop,
+    // app uninstalled, wrong browser), the redirect silently fails and the
+    // copy + button remain visible.
+    setTimeout(function () { window.location.href = deepLink; }, 600);
+  </script>
+</body>
+</html>
