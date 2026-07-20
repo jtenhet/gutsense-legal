@@ -86,22 +86,43 @@
 <body>
   <a href="https://jtenhet.github.io/gutsense-legal/" class="logo">GutSense</a>
   <div class="container">
-    <div class="check">✓</div>
-    <h1>Email confirmed</h1>
-    <p>Your GutSense account is all set. Open the app on your phone and sign in to start logging.</p>
+    <div class="check" id="mark">✓</div>
+    <h1 id="title">Email confirmed</h1>
+    <p id="body">Your GutSense account is all set. Open the app on your phone and sign in to start logging.</p>
     <a href="#" class="button" id="openApp">Open GutSense</a>
-    <p class="hint">If the button doesn't open the app, switch back to GutSense on your phone and sign in with the email and password you just used.</p>
+    <p class="hint" id="hint">If the button doesn't open the app, switch back to GutSense on your phone and sign in with the email and password you just used.</p>
   </div>
   <script>
-    // Preserve any URL fragment so the app can pick up access/refresh tokens
-    // for automatic sign-in when the deep link succeeds on the same device.
+    // Supabase (implicit flow) redirects here with the session in the URL
+    // fragment on success, or with an error fragment when the one-time link was
+    // already spent — a double-tap, or an email-security scanner pre-fetching
+    // the link. In the error case the FIRST hit already confirmed the account,
+    // so we never tell the user it failed; we just point them at signing in.
+    // Either way we forward the fragment to the app, which handles both.
     var fragment = window.location.hash || '';
+    // Match the actual error PARAM, not a stray "error" substring that could
+    // appear inside a base64 access_token.
+    var params = new URLSearchParams(fragment.replace(/^#/, ''));
+    var isError = params.has('error') || params.has('error_code') || params.has('error_description');
     var deepLink = 'gutsense://confirm-email' + fragment;
     document.getElementById('openApp').href = deepLink;
+
+    if (isError) {
+      // Don't claim "confirmed ✓" when this particular hit didn't confirm.
+      document.getElementById('title').textContent = 'Almost there';
+      document.getElementById('body').textContent =
+        'This confirmation link has already been used, which usually means your account is confirmed. Open GutSense and sign in to start logging.';
+      document.getElementById('hint').textContent =
+        "If signing in says your email isn't confirmed yet, use “Resend confirmation email” on the sign-in screen.";
+    }
+
     // Best-effort auto-handoff to the app. If no handler is installed (desktop,
-    // wrong browser, app uninstalled), this silently fails and the success
-    // copy + button remain visible.
-    setTimeout(function () { window.location.href = deepLink; }, 600);
+    // wrong browser, app uninstalled), this silently fails and the copy +
+    // button remain visible. Only auto-open on the success path so an error
+    // fragment doesn't yank the user into the app before they read the note.
+    if (!isError) {
+      setTimeout(function () { window.location.href = deepLink; }, 600);
+    }
   </script>
 </body>
 </html>
